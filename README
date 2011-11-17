@@ -63,10 +63,12 @@ Indexed-Sequential file I/O is used
      distribution. Cygwin also has these as installable packages
      ALWAYS install the distro packages when available !!
   **
+
   o Berkeley DB (libdb) 1.85 or later (runtime AND development)
-    http://www.sleepycat.com/
+    http://www.oracle.com/technetwork/database/berkeleydb/downloads/
 
     Recommended is version 4.x as 1.85 is known to have problems.
+
     ** NOTE **
     Linux distros usually carry the runtime AND development 
     rpm/deb package versions of 4.x. It is recommended to use these
