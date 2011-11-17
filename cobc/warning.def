@@ -1,0 +1,53 @@
+/*							-*- c -*-
+ * Copyright (C) 2003-2007 Keisuke Nishida
+ * Copyright (C) 2007 Roger While
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2, or (at your option)
+ * any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this software; see the file COPYING.  If not, write to
+ * the Free Software Foundation, 51 Franklin Street, Fifth Floor
+ * Boston, MA 02110-1301 USA
+ */
+
+#include "lib/gettext.h"
+
+/* CB_WARNDEF (sig, var, name, wall, doc) */
+
+CB_WARNDEF (1, cb_warn_obsolete, "obsolete", 1,
+	    N_("Warn if obsolete features are used"))
+
+CB_WARNDEF (2, cb_warn_archaic, "archaic", 1,
+	    N_("Warn if archaic features are used"))
+
+CB_WARNDEF (2, cb_warn_column_overflow, "column-overflow", 1,
+	    N_("Warn any text after column 72"))
+
+CB_WARNDEF (2, cb_warn_redefinition, "redefinition", 1,
+	    N_("Warn redefinition of data items"))
+
+CB_WARNDEF (2, cb_warn_constant, "constant", 1,
+	    N_("Warn inconsistent constant"))
+
+CB_WARNDEF (2, cb_warn_parentheses, "parentheses", 1,
+	    N_("Warn lacks of parentheses around AND within OR"))
+
+CB_WARNDEF (3, cb_warn_terminator, "terminator", 1,
+	    N_("Warn lacks of scope terminator (END-XXX)"))
+
+CB_WARNDEF (3, cb_warn_strict_typing, "strict-typing", 1,
+	    N_("Warn type mismatch strictly"))
+
+CB_WARNDEF (3, cb_warn_call_params, "call-params", 0,
+	    N_("Warn non 01/77 items for CALL params (NOT set with -Wall)"))
+
+CB_WARNDEF (3, cb_warn_truncate, "truncate", 0,
+	    N_("Warn possible field truncation (NOT set with -Wall)"))

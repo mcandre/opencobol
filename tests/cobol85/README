@@ -1,0 +1,71 @@
+How to run the NIST CCVS85 Test Suite
+=====================================
+
+*NOTE* It is expected that warnings and errors appear
+when running the test.
+
+The final command of the the test is a diff between
+expected results and actual results.
+ie. diff summary.txt summary.log
+If there is any output from this command, please
+tar and compress the complete cobol85 directory
+and report this to the OC list. You will receive
+further instructions where to send this.
+
+*NOTE* This test can take a long time depending
+on your hardware.
+
+1. Download the test archive `newcob.val.Z' from
+
+  http://www.itl.nist.gov/div897/ctg/cobol_form.htm
+
+2. Uncompress it:
+
+  uncompress newcob.val.Z
+
+3. Move the file newcob.val to the tests/cobol85 directory
+
+4. Run the test suite:
+
+  cd tests/cobol85
+  make test
+
+5. Test report summary will be put in summary.log.
+
+6. When rerunning test as a result of a change, always
+   do a "make clean" before "make test"
+
+7. The default OC configuration tests NC SM IC SQ RL IX ST IF
+
+Make Options
+------------
+
+- make test     run the test suite
+- make save     save test reports in *.txt
+- make diff     diff from *.txt to the last reports
+- make clean    remove built files
+
+Test Modules
+------------
+
+Core tests:
+
+  NC - COBOL nucleus tests
+  SM - COPY sentence tests
+  IC - CALL sentence tests
+
+File I-O tests:
+
+  SQ - Sequential file I-O tests
+  RL - Relative file I-O tests
+  IX - Indexed file I-O tests
+  ST - SORT sentence tests
+
+Advanced facilities:
+
+  RW - REPORT SECTION tests
+  CM - COMMUNICATION SECTION tests
+  IF - Intrinsic Function tests
+  SG - Segment tests
+  DB - Debugging facilities tests
+  OB - Obsolete facilities tests
